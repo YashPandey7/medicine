@@ -16,14 +16,30 @@ else{
     
     <header class="header_section">
       <div class="container-fluid">
-        <nav class="navbar navbar-expand-lg custom_nav-container pt-3">
-          <a class="navbar-brand" href="index.php">
+        <nav class="navbar navbar-expand-lg custom_nav-container pt-3">';
+
+        if(!$loggedin){
+        echo '
+          <a class="navbar-brand" href="./index.php">
             <img src="images/logo.png" alt="">
             <span>
               Medion
             </span>
-          </a>
+          </a>';
+        }
+
+        if($loggedin){
+          echo '
+            <a class="navbar-brand" href="./welcome.php">
+              <img src="images/logo.png" alt="">
+              <span>
+                Medion
+              </span>
+            </a>';
+          }
           
+
+        echo'
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -37,29 +53,28 @@ else{
               {
                 echo '
                 <li class="nav-item active">
-                  <a class="nav-link" href="/project/index.php">Home <span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="./index.php">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="about.php"> About </a>
+                  <a class="nav-link" href="./about.php"> About </a>
                 </li>';
               }
 
                 if($loggedin)
                 {
                   echo '
-                  <ul class="navbar-nav  ">
                   <li class="nav-item active">
-                    <a class="nav-link" href="/project/welcome.php">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="./welcome.php">Home <span class="sr-only">(current)</span></a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="login_about.php"> About </a>
+                    <a class="nav-link" href="./login_about.php"> About </a>
                   </li>
 
                   <li class="nav-item">
-                  <a class="nav-link" href="medicine.php"> Medicine </a>
+                  <a class="nav-link" href="./medicine.php"> Medicine </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="contact.php">Contact us</a>
+                  <a class="nav-link" href="./contact.php">Contact us</a>
                 </li>
                   ';
                 }
@@ -76,7 +91,7 @@ else{
                 {
                   echo '
                   <div class="login_btn-contanier ml-0 ml-lg-5">
-                  <a href="/project/login.php">
+                  <a href="./login.php">
                     <img src="images/user.png" alt="">
                     <span>
                       Login
@@ -90,7 +105,18 @@ else{
                 {
                   echo '
                   <div class="login_btn-contanier ml-0 ml-lg-5">
-                  <a href="/project/logout.php">
+                    <img src="images/user.png" alt="">
+                    <span style="color:white;">&nbsp;&nbsp;';
+                    
+                    echo $_SESSION['username']; 
+
+                    echo '
+                    </span>
+                  </div>
+
+
+                  <div class="login_btn-contanier ml-0 ml-lg-5">
+                  <a href="./logout.php">
                     <span>
                       Logout
                     </span>

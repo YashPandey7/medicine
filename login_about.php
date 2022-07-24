@@ -45,9 +45,9 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!= true)
 </head>
 
 <body>
-    <?php
-        require "partials/_nav.php";
-    ?>
+        <?php
+            require 'partials/_nav.php';
+        ?> 
 
   <!-- about section -->
   <section class="about_section layout_padding">

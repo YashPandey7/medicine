@@ -29,14 +29,14 @@
   <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700|Roboto:400,700&display=swap" rel="stylesheet">
 
   <!-- Custom styles for this template -->
-  <link href="css/style.css" rel="stylesheet" />
+  <link href="./css/style.css" rel="stylesheet" />
   <!-- responsive style -->
-  <link href="css/responsive.css" rel="stylesheet" />
+  <link href="./css/responsive.css" rel="stylesheet" />
 </head>
 
 <body>
     <?php
-        require "partials/_nav.php";
+        require "./partials/_nav.php";
     ?>
 
   <!-- about section -->
@@ -49,7 +49,7 @@
       </div>
 
       <div class="img-box">
-        <img src="images/about-medicine.png" alt="">
+        <img src="./images/about-medicine.png" alt="">
       </div>
       <div class="detail-box">
         <p>
@@ -66,7 +66,7 @@
 
     <!-- Footer -->
     <?php
-        require "partials/_footer.php";
+        require "./partials/_footer.php";
     ?>
   
 

@@ -1,4 +1,15 @@
 <?php
+if(isset($_SESSION['loggedin']) && $_SESSION['loggedin']==true)
+{
+  $loggedin = true;
+}
+else{
+  $loggedin = false;
+}
+
+?>
+
+<?php
     echo '
   <!-- info section -->
   <section class="info_section layout_padding2">
@@ -15,7 +26,7 @@
               </div>
               <div class="detail-box">
                 <h6>
-                  +01 123567894
+                  +91 7458997701
                 </h6>
               </div>
             </div>
@@ -25,7 +36,7 @@
               </div>
               <div class="detail-box">
                 <h6>
-                  demo@gmail
+                  yashdevesh10@gmail.com
                 </h6>
               </div>
             </div>
@@ -36,19 +47,35 @@
             <h4>
               Menu
             </h4>
-            <ul class="navbar-nav  ">
+            <ul class="navbar-nav  ">';
+
+            if(!$loggedin) {
+              echo '
               <li class="nav-item active">
-                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="./index.php">Home <span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="about.html"> About </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="medicine.html"> Medicine </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="buy.html"> Online Buy </a>
-              </li>
+                <a class="nav-link" href="./about.php"> About </a>
+              </li>'
+              ;}
+
+              if($loggedin){
+                  echo '
+                <li class="nav-item active">
+                  <a class="nav-link" href="./welcome.php">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./login_about.php"> About </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./medicine.php"> Medicine </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./contact.php"> Contact Us </a>
+                </li>';
+              }
+
+              echo '
             </ul>
           </div>
         </div>
@@ -77,7 +104,7 @@
   <!-- footer section -->
   <section class="container-fluid footer_section">
     <p>
-      &copy; 2022 All Rights Reserved. Design by Dark_Batman
+      &copy; 2022 All Rights Reserved. Design by <a href="https://yashpandey.netlify.app/" target="_blank" style="color:#008080;">Yash Pandey</a>.
     </p>
   </section>
   <!-- footer section -->

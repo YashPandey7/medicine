@@ -40,15 +40,15 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!= true)
   <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700|Roboto:400,700&display=swap" rel="stylesheet">
 
   <!-- Custom styles for this template -->
-  <link href="css/style.css" rel="stylesheet" />
+  <link href="./css/style.css" rel="stylesheet" />
   <!-- responsive style -->
-  <link href="css/responsive.css" rel="stylesheet" />
+  <link href="./css/responsive.css" rel="stylesheet" />
 </head>
 
 <body class="sub_page">
  
     <?php
-        require "partials/_nav.php";
+        require "./partials/_nav.php";
     ?>
 
     <!-- contact section -->
@@ -113,7 +113,7 @@ if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!= true)
   <!-- end contact section -->
 
     <?php
-        require "partials/_footer.php";
+        require "./partials/_footer.php";
     ?>
 
   <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>

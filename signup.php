@@ -62,13 +62,11 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
 
 
   <!-- bootstrap core css -->
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+  <!-- <link rel="stylesheet" type="text/css" href="css/bootstrap.css" /> -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 
   <!-- fonts style -->
   <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700|Roboto:400,700&display=swap" rel="stylesheet">
-
-  <!-- Font icon -->
-  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
 
   <!-- Custom styles for this template -->
   <link href="css/style.css" rel="stylesheet" />
@@ -78,9 +76,9 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
 <body>
  
 
-    <?php
-        require 'partials/_nav.php'
-    ?>
+        <?php
+            require 'partials/_nav.php';
+        ?> 
     
     <?php
       if($showalert)
@@ -113,12 +111,12 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
   <div class="container-fluid h-custom">
     <div class="row d-flex justify-content-center align-items-center h-100">
       <div class="col-md-9 col-lg-6 col-xl-5">
-        <img src="/project/images/signup.svg"
+        <img src="images/signup.svg"
           class="img-fluid" alt="Sample image">
       </div>
       <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1" style="padding-top:35px;">
         
-      <form action="/project/signup.php" method="post">
+      <form action="signup.php" method="post">
           <div class="d-flex flex-row align-items-center  justify-content-center justify-content-lg-start">
             <p class="lead fw-normal mb-0 me-3 display-4 " >Register Now</p>
           </div><br>
@@ -153,7 +151,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
           <div class="text-center text-lg-start mt-4 pt-2">
             <button type="submit" class="btn btn-primary btn-lg"
               style="padding-left: 2.5rem; padding-right: 2.5rem;">Register</button>
-            <p class="small fw-bold mt-2 pt-1 mb-0">Have an account already? <a href="/project/login.php"
+            <p class="small fw-bold mt-2 pt-1 mb-0">Have an account already? <a href="login.php"
                 class="link-danger">Log in</a></p>
           </div>
 
@@ -165,8 +163,15 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
 
 
     <?php
-        require 'partials/_footer.php'
+        require 'partials/_footer.php';
     ?> 
+
+
+<!-- Bootstrap -->
+<!-- Bootstrap Links-->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+
 
 </body>
 </html>
